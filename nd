@@ -9,7 +9,7 @@
 '
 
 # Get today's date
-filename=$(date "+%Y-%m-%d").md
+filename=daily/$(date "+%Y-%m-%d").md
 
 # Check if the file already exists
 if [ -f $filename ]; then
