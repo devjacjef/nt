@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ ! -e "note.md" ]]; then
+  filename="note.md"
+else
+  i=1
+  while [[ -e "note-$i.md" ]]; do
+    ((i++))
+  done
+  filename="note-$i.md"
+fi
+
+hx "notes/$filename"
