@@ -1,0 +1,34 @@
+#!/bin/bash
+
+: '
+  NEW DAILY NOTE SCRIPT
+  SCRIPT THAT CREATES A NEW NOTE FOR DEVLOG
+
+  TODO:
+    - MAYBE GROUP MY MM/YYYY IN A LOGS DIRECTORY
+'
+
+# Get today's date
+filename=$(date "+%Y-%m-%d").md
+
+# Check if the file already exists
+if [ -f $filename ]; then
+  echo "File $filename already exists."
+# If not, make the file :)
+else
+  cat <<EOF > "$filename"
+# $filename
+
+## Morning coding session
+
+
+
+## Evening coding session
+
+
+
+EOF
+fi
+
+# Open my preferred editor with the file name.
+hx $filename
