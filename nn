@@ -10,4 +10,4 @@ else
   filename="note-$i.md"
 fi
 
-hx "notes/$filename"
+hx -w notes "notes/$filename"
