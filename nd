@@ -1,13 +1,5 @@
 #!/bin/bash
 
-: '
-  NEW DAILY NOTE SCRIPT
-  SCRIPT THAT CREATES A NEW NOTE FOR DEVLOG
-
-  TODO:
-    - MAYBE GROUP MY MM/YYYY IN A LOGS DIRECTORY
-'
-
 # Get today's date
 filename=daily/$(date "+%Y-%m-%d").md
 
@@ -24,7 +16,6 @@ else
 
 
 ## Evening coding session
-
 
 
 EOF
