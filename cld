@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -f "dump/dump.md" ]; then
+  echo "Removing stuff from the dump."
+  rm dump/*.md
+else
+  echo "There is currently nothing in the dump!"
+fi

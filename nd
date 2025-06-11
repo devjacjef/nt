@@ -1,25 +1,36 @@
 #!/bin/bash
 
 # Get today's date
-filename=daily/$(date "+%Y-%m-%d").md
+filename=$(date "+%Y-%m-%d").md
+author="Jack Jefferson"
 
 # Check if the file already exists
-if [ -f $filename ]; then
+if [ -f daily/$filename ]; then
   echo "File $filename already exists."
 # If not, make the file :)
+
+# TODO Implement a way to check the date
+# This is to set different kinds of daily notes
 else
-  cat <<EOF > "$filename"
+  cat <<EOF > "daily/$filename"
+---
+title: $filename
+author: $author
+---
 # $filename
 
-## Morning coding session
+## Coding Sessions
 
+### Personal
 
+#### Morning (06:00 AM - 07:00 AM)
+#### Evening (20:00 PM - 22:00 PM)
 
-## Evening coding session
+### Work
 
 
 EOF
 fi
 
 # Open my preferred editor with the file name.
-hx $filename
+hx -w daily daily/$filename
