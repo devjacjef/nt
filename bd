@@ -38,3 +38,5 @@ author: $author
 EOF
 fi
 
+hx -w dump/ $filename
+
