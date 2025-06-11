@@ -8,6 +8,9 @@ author="Jack Jefferson"
 if [ -f daily/$filename ]; then
   echo "File $filename already exists."
 # If not, make the file :)
+
+# TODO Implement a way to check the date
+# This is to set different kinds of daily notes
 else
   cat <<EOF > "daily/$filename"
 ---
@@ -18,11 +21,12 @@ author: $author
 
 ## Coding Sessions
 
-### Morning
+### Personal
 
+#### Morning (06:00 AM - 07:00 AM)
+#### Evening (20:00 PM - 22:00 PM)
 
-
-### Evening
+### Work
 
 
 EOF

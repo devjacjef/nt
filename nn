@@ -1,13 +1,37 @@
 #!/bin/bash
 
-if [[ ! -e "notes/note.md" ]]; then
-  filename="note.md"
+base_dir="notes/"
+author="Jack Jefferson"
+path=$1
+
+full_dir="$base_dir/$path"
+
+if [ ! -d "$full_dir" ]; then
+  echo "Creating new directory $full_dir"
+  mkdir $full_dir
+fi
+
+if [ -n "$1" ]; then
+  echo $1
+fi
+
+if [[ ! -e "${full_dir}/note.md" ]]; then
+  filename+="note.md"
 else
   i=1
-  while [[ -e "notes/note-$i.md" ]]; do
+  while [[ -e "${full_dir}/note-$i.md" ]]; do
     ((i++))
   done
   filename="note-$i.md"
 fi
 
-hx -w notes "notes/$filename"
+cat <<EOF > "$full_dir/$filename"
+---
+title:
+author: $author
+---
+#
+
+EOF
+
+hx -w "$full_dir" "$full_dir/$filename"

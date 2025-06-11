@@ -1,0 +1,40 @@
+#!/bin/bash
+
+filename="dump/dump.md"
+author="Jack Jefferson"
+
+if [ -f $filename ]; then
+  echo "You already have stuff in the dump."
+else
+echo "Creating a new dump file."
+cat <<EOF > $filename
+---
+title: The Dump
+author: $author
+---
+# The Dump
+
+*Welcome to "The Dump". Please fill in each section.*
+
+## Outstanding Tasks
+
+*What tasks do you currently have outstanding?*
+
+## Worries/Stressors
+
+*What is bothering you right now? Are you afraid something might go wrong?*
+
+## Priorities/Goals
+
+*What matters today? What would make me feel successful?*
+
+## Distractions
+
+*What is pulling my attention away? What is my escape?*
+
+## Any other random thoughts?
+
+*Any other random thoughts? Anything that you just need to write down?*
+EOF
+fi
+
