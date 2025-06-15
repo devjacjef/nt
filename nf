@@ -7,6 +7,6 @@ if [ "$count" -gt 10 ]; then
 else
   filename=fleeting/fleeting-$count.md
   touch $filename
-  hx -w fleeting $filename
+  nvim $filename
 fi
 

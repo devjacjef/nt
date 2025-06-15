@@ -33,4 +33,5 @@ EOF
 fi
 
 # Open my preferred editor with the file name.
-hx -w daily daily/$filename
+
+nvim daily/$filename

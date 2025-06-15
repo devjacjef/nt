@@ -34,4 +34,4 @@ author: $author
 
 EOF
 
-hx -w "$full_dir" "$full_dir/$filename"
+nvim "$full_dir/$filename"

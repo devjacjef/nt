@@ -10,6 +10,16 @@ I mainly write in markdown when taking notes and want to maintain a set of scrip
 
 Yeah go for it! I don't mind, I think they're pretty neat and if you enjoy working in the terminal with tools like Vim then it can be a nice addition to your workflow.
 
+## List of directories:
+
+- `daily/` - Daily notes.
+- `notes/` - Just general notes.
+- `fleeting/` - Limited by default to a maximum of 10 fleeting notes.
+- `dump/` - Only one dump file can remain.
+
+<!--TODO An archive folder maybe?-->
+<!--TODO Encryption maybe...-->
+
 ## List of scripts:
 
 - `bd` (Brain Dump), Writes a file to `dump/` if it does not contain one already. Does not write if there is a file already there.
